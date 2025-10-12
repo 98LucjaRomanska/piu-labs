@@ -1,0 +1,139 @@
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+  display:table;
+  margin:auto;
+}
+body {
+  margin: 1rem;
+  padding: 0;
+  width:500px;
+  text-align: left;
+  display: flex;
+  flex-wrap:wrap;
+  vertical-align:middle;
+  /*justify-content: center;*/
+  background-color: #F9F9F9;
+}
+h1 {
+  /*margin-left: 1rem;*/
+}
+nav {
+  align-self: flex-end;
+}
+#contest {
+  display:inline-block;
+  align-self: flex-end;
+  text-align: left;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*padding: 30px;*/
+  /*border: 1px solid #333333;*/
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  background-color: #FFFFFF;
+}
+label{
+  padding-bottom:2px;
+  display:inline-block;
+  
+}
+br {
+  padding: 0px;
+}
+#Wyślij {
+  text-size-adjust:initial;
+  text-align: center;
+  border-radius: 5px;
+  border: 0px;
+  width: 390px;
+  align-self: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  background-color: rgba(76, 175, 80);
+  color:#FFFFFF;
+  /*#ffdd00 School bus Yellow*/
+}
+#Wyślij:hover {
+  background-color: #45a049;
+}
+#Wyślij, select, option, input[type="color"], input[type="checkbox"],
+input[type="radio"], label:hover {
+  cursor: pointer;
+}
+.moon{
+  display:inline-block;
+}
+.moon:hover {
+  cursor:pointer;
+}
+
+body:has(.moon:active) #contest {
+  background-color: #1c1c1c;
+  color: #c9c9c9;
+}
+
+body:has(.moon:active) input {
+  background-color: #383838;
+  border: 1px solid black;
+  color: #c9c9c9;
+}
+body:has(.moon:active) select {
+  background-color: #383838;
+  border: 1px solid black;
+  color: #c9c9c9;
+}
+
+body:has(.moon:active) fieldset {
+  border: 1px solid #c9c9c9;
+  color: #c9c9c9;
+}
+
+
+
+
+
+input {
+  padding: 7px;
+  border: 1px solid;
+  margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[list="lista-miast"],
+input[type="number"] {
+  width: 370px;
+}
+input[type="color"] {
+  width: 385px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+ 
+fieldset {
+  text-align:left;
+  width: 355px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+select {
+  border: 1px solid;
+  width: 385px;
+  padding: 8px;
+  margin-bottom: 3px;
+  background-color: #FFFFFF;
+}

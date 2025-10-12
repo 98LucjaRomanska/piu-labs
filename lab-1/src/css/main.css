@@ -1,0 +1,122 @@
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+  /*display:table;*/
+  margin:auto;
+}
+/*
+body {
+  text-align: center;
+  display:flex;
+  flex-wrap: wrap;
+  background-color: #F9F9F9;
+  background-image: url("../img/IMG_0529.jpg");
+  background-size: auto;
+}*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height: 100vh;
+  background-image: url('../img/ClaudioSchwarz.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*login.html*/
+.login {
+  width: 400px;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 10px 50px 25px;
+  border: 2px solid rgba(254, 254, 254, 0.729);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.login h1{
+  text-align: center;
+  font-size: 36 px;
+  cursor:pointer;
+}
+.login h1:hover {
+  color:#ffffffd8;
+}
+.login .input-box{
+  width: 90%;
+  height: 50px;
+  margin: 30px 10px 15px; /*top, right & left, bottom*/
+
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  /*border: none;*/
+  outline: none;
+  border: 2px solid rgba(255,255,255, .2);
+  border-radius: 40px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.login .remember {
+  display: flex;
+  font-size: 14.5px;
+  margin-top: 25px;
+  margin-left: 80px;
+  /*align-self: center;*/
+}
+
+.remember input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.login button {
+  width: 96%;
+  height: 45px;
+  /*background: #fff;*/
+  background: transparent;
+  /*opacity: 0.7;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  outline: none;
+  border: 2px solid rgba(242, 238, 238, 0.421);
+  border-radius: 40px;
+  margin: 25px 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(242, 238, 238 );
+}
+.login button:hover {
+  color: rgba(242, 238, 238, 0.8);
+  border: 3px solid rgba(242, 238, 238, 0.177);
+}
+.login button:active {
+  opacity: none;
+}
+/*uwagi.html*/
+header {
+  background-color: transparent;
+  width:100%;
+  height: 20%;
+  color:rgba(242, 238, 238 );
+
+}
+.textarea {
+  width: 400px;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 10px 50px 25px;
+  border: 2px solid rgba(254, 254, 254, 0.729);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+

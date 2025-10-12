@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="src\css\main.css">
+
+</head>
+<body>
+
+    <div class="login">
+        <form action="https://httpbin.org/post" method="post">
+            <h1>Zaloguj się</h1>
+            <div class="input-box">
+                <input type="text" name="użytkownik" placeholder="Nazwa użytkownika"/>
+            </div>
+            <div class="input-box">
+                <input type="password" name="haslo" placeholder="Hasło"/>
+            </div>
+            <div class="remember">
+                <input type ="checkbox" name="check">
+                <label for="check">Zapamiętaj dane logowania</label>
+            </div>
+            <button type="submit">Wyślij</button>
+            
+        </form>
+    </div>
+</body>
+</html>

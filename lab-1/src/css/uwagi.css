@@ -1,0 +1,60 @@
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+  /*display:table;*/
+  margin:auto;
+}
+
+body {
+  display:block;
+  /*justify-content: center;*/
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../img/ClaudioSchwarz.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header {
+  background-color: transparent;
+  width:100%;
+  padding: 1rem 0;
+  /*background-color: #cc1919;*/
+  color:rgb(238, 237, 237);
+  text-align: center;
+}
+main {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+a {
+    color: rgb(238, 237, 237);
+    text-decoration: none; /* bez podkreślenia */
+    font-size: 1.4rem;
+}
+a:hover {
+    color:rgba(238, 237, 237, 0.821);
+    font-weight: 500;
+}
+li:hover {
+    color: rgba(254, 254, 254, 0.838);
+    cursor:pointer;
+}
+
+.textarea {
+  width: 400px;
+  background-color: transparent;
+  color: rgb(238, 237, 237);
+  padding: 10px 50px 25px;
+  border: 2px solid rgba(254, 254, 254, 0.588);
+  backdrop-filter: blur(355px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  margin: 20px 20px;
+}
+.textarea nav{
+    justify-content: center;
+    padding: 30px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset = "UTF-8"> 
+<link rel="stylesheet" href ="src/css/konkurs.css">
+<title>Konkurs</title>
+</head>
+<body>
+    <h1> Zgłoszenie <br>
+    do Konkursu Plastycznego </h1>
+    <h1 class="moon" title="Zmień motyw">&#x1F317;</h1>
+
+    
+    <form action="https://httpbin.org/get" class="contest" method="get" id="contest">
+        <table>
+        <tr>
+            <td>
+            <label for="imie"> Imię: </label></br>
+            <input type = "text" name="imie" id="imie" maxlength="30"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="nazwisko">Nazwisko:</label></br>
+            <input type = "text" name="nazwisko" id="nazwisko" maxlength="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="email">Email:</label></br>
+            <input type ="email" name ="email" id="email"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="miasto">Miasto:</label></label></br>
+            <input list="lista-miast" name = "miasto" id="miasto" placeholder="Wpisz lub wybierz"/>
+            <datalist id="lista-miast">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Kraków">Kraków</option>
+                <option value="Gdańsk">Gdańsk</option>
+                <option value="Poznań">Poznań</option>
+                <option value="Wrocław">Wrocław</option>
+            </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="data">Data urodzenia:</label></br>
+                <input type = "date" name ="data" id="data" lang="en-US"/>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <label for="liczba zgłaszanych prac">Liczba zgłaszanych prac (od 1 do 6):</label></br>
+                <input type = "number" id ="liczba zgłaszanych prac" min="1" max = "6"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="kolor">Kolor wiodący prac:</label>
+                <input type ="color" name="kolor" id="kolor"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="kategoria pracy">Kategoria pracy:</label></br>
+                <select name="kategoria pracy", id="kategoria pracy">
+                    <option> -- wybierz kategorię --</option>
+                    <option  value ="Rysunek">Rysunek</option>
+                    <option  value ="Malarstwo">Malarstwo</option>
+                    <option  value ="Grafika cyfrowa">Grafika cyfrowa</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Publikacja pracy online:</legend>
+                        <input type="radio" name="YES-NO" id="tak">
+                        <label for="YES-NO">Tak</label></br>
+                        
+                        <input type="radio" name ="YES-NO" id = "nie"> 
+                        <label for="YES-NO">Nie</label>
+                        <!--oba radio muszą mieć to samo name aby dało się odchaczyć tylko jedno-->
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type ="checkbox" name="check">
+                <label for="check">Zgadzam się na regulamin konkursu</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" name="Wyślij" id="Wyślij"><b>Wyślij zgłoszenie</b></button>
+            </td>
+        </tr>
+    </table>
+    </form>
+    
+    <nav>
+        <p></p>
+        <a href=".."> Powrót do strony głównej </a></br>
+    </nav>
+
+</body>
+</html>
