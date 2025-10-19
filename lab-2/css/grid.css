@@ -6,33 +6,117 @@
 }
 body {
   font-family: Arial, sans-serif;
-    @media (max-width:600px) {
-
-    }
-
-    @media( max-width:1200px) {
-        
-    }
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width:1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /*potrzebne do wyśrodkowania"*/
+  }
+  header {
+    grid-area: header; 
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main; /*definiowanie ich nazwy w template-areas*/
+  }
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
+
 main, aside {
   h1, h2, h3, p {
     margin-bottom: 1rem;
     line-height: 1.5;
+    color: rgb(54, 54, 54);
   }
 }
+main {
+  grid-area: main;
+  background-color: #F4F4F4;
+  padding: 2vh;
+}
 header {
-    background-color: orange;
-    width: auto;
+    grid-area: header;
+    display: flex;
+    background-color: #F49C11;
+    align-items: center;
+    color: whitesmoke;
+    padding: 2vh;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1vh 1vw;
+  color:rgb(54, 54, 54);
+  font-weight: bold;
+  border:none;
+  border-radius: 2px;
+  background-color:#F4F4F4 ;
+  margin-left: 1%;
+  margin-right: 1%;;
+}
+.logo:before {
+  content:"Logo";
 }
 nav {
-    background-color: rgb(0, 124, 249);
-    width: auto;
+    grid-area:nav;
+    background-color: #2880B9;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+nav a {
+  font-weight: bold;
+  color: aliceblue;
+  margin: 0 10px;
+  text-decoration: none;
+
 }
 footer {
-    background-color: green;
-    width: auto;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  background-color: #26AE5F;
+  width: auto;
+  color: whitesmoke;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 aside {
-    background-color: rgb(183, 227, 183);
+    grid-area: aside;
+    background-color: rgb(178, 222, 178);
     width: auto;
+    padding: 2vh;
+
 }
+
+aside p + div { /*div bezpośrednio po p w aside*/
+    font-size: 4rem;
+    text-align: center;  
+  }
+/*najpierw mobile first i potem w @media wersja szeroka (treść 1024-1200)*/
