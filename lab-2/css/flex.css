@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  justify-content: center;
+
+  
+}
+fieldset {
+  border: 2px solid rgb(160, 50, 50);
+  border-radius: 10px;
+  background-color: rgb(247, 242, 220);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  
+}
+legend {
+  font-weight: bold;
+  padding-bottom: 0px;
+}
+header {
+  width: 100%;
+}
+
+.container {
+  background-color: rgb(247, 242, 220);
+  border: 2px solid rgb(160, 50, 50);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 2px;
+  width: 99%;
+  color: whitesmoke;
+}
+.item {
+  width: 26%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+}
+/*
+viewport units (vw - viewport width, vh - viewport height)
+*/
+
+body:has(input[value="green"]:checked) {
+  .item {
+    background-color: green;
+    border-radius: 5px;
+  }
+  @media (min-width: 1024px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .item {
+      width: 5%;
+    }
+    .item:nth-child(1) {
+      flex-grow: 4;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .item:nth-child(1):before {
+      content: "😃";
+    }
+     .item:nth-child(1):after {
+      content:"😃";
+    }
+    .item:nth-child(2) {
+      flex-grow: 3;
+    }
+    .item:nth-child(3) {
+      flex-grow: 2;
+    }
+    .item:nth-child(4) {
+      /*width: 10%;*/
+      /*flex-grow: 0;*/
+      flex-grow: 1;
+    }
+    .item:nth-child(5) {
+    }
+  }
+  @media (max-width: 1023px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items:flex-end;
+    }
+    .item {
+      width: 5%; 
+    }
+    .item:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+    }
+    .item:nth-child(1):before {
+      content: "😃";
+    }
+     .item:nth-child(1):after {
+      content:"😃";
+    }
+    .item:nth-child(2) {
+      width: 65%
+    }
+    .item:nth-child(3) {
+      width: 50%;
+    }
+    .item:nth-child(4) {
+      width: 35%;
+    }
+    .item:nth-child(5) {
+      width: 20%;
+    }
+    
+
+  }
+}
+
+body:has(input[value="red"]:checked) {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+        justify-content: space-between;
+        padding: 10px;
+      }
+  @media (min-width: 1024px) {
+    .item {
+      background-color: red;
+      order:2;
+      width: 12vw;
+    }
+    .item:nth-child(3), 
+    .item:nth-child(2) {
+      order:0;
+    }
+    .item:nth-child(1) {
+      order: 1;
+      font-weight: bold;
+      flex-grow:1;
+    }
+    .item:nth-child(1):after {
+      content: "(Jestem większy i na środku!)";
+      font-size: small;
+      font-weight: 400;
+      display:flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 1023px) {
+    .item {
+      background-color: red;
+      flex-grow: 1;
+      order:2;
+    }
+    .item:nth-child(3), 
+    .item:nth-child(2) {
+      order:0;
+    }
+    .item:nth-child(1) {
+      order: 1;
+      font-weight: bold;
+      width: 100%;
+    }
+    .item:nth-child(1):after {
+      content: "(Jestem większy i na środku!)";
+      font-size: small;
+      font-weight: 400;
+      display:flex;
+      flex-direction: column;
+    }
+      
+  }
+}
+
+body:has(input[value="blue"]:checked) {
+  @media (min-width: 1024px) {
+      .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+    }
+      .item {
+      background-color: blue;
+      border: 2px solid blue;
+    }
+      .item:hover {
+        border: 2px solid rgb(160, 50, 50);
+      }
+  }
+  @media (max-width: 1023px) {
+    .container {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .item {
+      background-color: blue;
+      border: 2px solid blue;
+      width: 50%;
+    }
+    .item:hover {
+      border: 2px solid rgb(160, 50, 50);
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+    @media (max-width:600px) {
+
+    }
+
+    @media( max-width:1200px) {
+        
+    }
+}
+main, aside {
+  h1, h2, h3, p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+header {
+    background-color: orange;
+    width: auto;
+}
+nav {
+    background-color: rgb(0, 124, 249);
+    width: auto;
+}
+footer {
+    background-color: green;
+    width: auto;
+}
+aside {
+    background-color: rgb(183, 227, 183);
+    width: auto;
+}
