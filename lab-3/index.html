@@ -3,10 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/polo.css" class="blue"/>
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+      <section class="image-holder">
+        <figure>
+          <img srcset="images/polo_b.png" alt="Niebieska koszula" class="bb">
+          <img srcset="images/polo_r.png" alt="Czerwona koszula" class="rr">
+          <img srcset="images/polo_g.png" alt="Zielona koszula" class="gg">
+          <img srcset="images/polo_y.png" alt="Żółta koszula" class="yy">
+          <!--<img src="images/polo_b.png" alt="Blue"/>-->
+        </figure>
+      </section>
+      <section>
+        <div class="item1">
+            <h2>Koszulka Polo</h2>
+            <h4> Promocja!</h4>
+            <!--<a href="temp.html">Temp </a>-->
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita placeat quaerat laborum.</p> 
+        </div>
+        <div class="item2"><h2>Kolor</h2>
+          <form> 
+          <!--<input type="radio" name="YES-NO" id="tak">
+           <label for="YES-NO"></label> -->
+            <label for="blue" class="custom-radio">
+              <input type="radio" id="blue"name="radioField" value ="blue" class="radio-input" checked>
+              <div class="radio-holder" id="blue"></div>
+            </label>
+            <label for="red" class="custom-radio">
+              <input type="radio" id="red" name="radioField" value="red" class="radio-input" >
+              <div class="radio-holder" id="red"></div>
+            </label>
+            <label for="green" class="custom-radio">
+              <input type="radio" id="green" name="radioField" value="green" class="radio-input" >
+              <div class="radio-holder" id="green"></div>
+            </label>
+            <label for="yellow" class="custom-radio">
+              <input type="radio" id="yellow" name="radioField" value="yellow" class="radio-input">
+              <div class="radio-holder" id="yellow"></div> 
+            </label>
+          </form>
+        </div>
+        <div class="item3">
+          <h2>Rozmiar</h2>
+          <p>S</p><p>M</p>
+          <p>L</p>
+          <p>XL</p>
+        </div>
+        <div class="item4">
+          <h2>59,99</h2>
+          <h3> Do koszyka</h3>
+        </div>
+      </section>
+       
   </body>
 </html>

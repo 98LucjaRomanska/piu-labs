@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+form {
+    width: 400px;
+    margin: 20px auto;
+    background-color: #f9f9f9ff;
+    padding: 15px;
+}
+form input[type="radio"] {
+
+}
+
+form label {
+    position: relative;
+}
+form label::before {
+    content:'';
+}
+form input[type="radio"]:checked + label::after{
+    content:'';
+}

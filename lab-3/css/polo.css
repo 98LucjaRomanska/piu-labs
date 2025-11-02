@@ -1,0 +1,265 @@
+:root { /*tu definiować zmienne globalne*/
+    --font-size-large: 1.5rem;
+    --blue:#1E5A9C ;
+    --red: #D32F2F;
+    --green:#388E3C;
+    --yellow:#FBC02D;
+    --base-color: red;
+    --alt-color: green;
+    
+}
+
+* {
+    color: var(--color);
+}
+/* zdefiniować jedną zmienną którą podstawiam w zależności od szerokości
+*/
+html {
+    font-size: 16px; /* bazowy rozmiar czcionki */
+    font-family: system-ui, sans-serif; /* font systemowy */
+    line-height: 1.5; /* lepsza czytelność */
+}
+
+body {
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*color: var(--primat-color);
+    font-size: var(--font-size-large);*/
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    /*height: auto;*/
+    background-color: white;
+    border: 3px solid #00418D;
+    border-radius: 10px;
+    /*margin: 0 10%;*/
+}
+/*picture {
+    justify-self: center;
+}*/
+
+.image-holder {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh;
+    max-height: 500px;
+    max-width: 500px;
+
+
+}
+.image-holder img {
+    display: none;
+}
+
+section {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    max-width: 500px;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    justify-items: center;
+}
+
+.custom-radio {
+    display:inline-flex;
+    cursor: pointer;
+}
+.radio-input {
+    display: none;
+    width: 1,25em;
+    height: 1,25em; 
+}
+
+.radio-holder {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.radio-holder::after {
+    content: "";
+    /*position: absolute;*/ /*pozycjonowanie względem .radio-holder*/
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    border-radius: 50%;
+    transition: all 0.15s ease;
+}
+
+#blue {
+    background-color: var(--blue);
+}
+#red {
+    background-color: var(--red);
+}
+#green {
+    background-color: var(--green);
+}
+#yellow {
+    background-color: var(--yellow);
+}
+
+
+.radio-input:checked + .radio-holder::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 6px solid #EEEEEE;
+    position:absolute;
+}
+.radio-input:checked + .radio-holder {
+    display:block;
+}
+
+body:has(input[value='blue']:checked) .image-holder img.bb {
+    display:block;
+    border-color: var(--blue);
+}
+body:has(input[value='blue']:checked) .item4 h3 {
+    background-color: var(--blue);
+}
+body:has(input[value='blue']:checked) .item1 h4 {
+    background-color: var(--blue);
+}
+body:has(input[value='blue']:checked) .item3 p:hover {
+    background-color: var(--blue);
+}
+
+body:has(input[value='red']:checked) .image-holder img.rr {
+    display:block;
+    border-color: var(--red);
+}
+body:has(input[value='red']:checked) .item4 h3 {
+    background-color: var(--red);
+}
+body:has(input[value='red']:checked) .item1 h4 {
+    background-color: var(--red);
+}
+body:has(input[value='red']:checked) .item3 p:hover {
+    background-color: var(--red);
+}
+
+body:has(input[value='green']:checked) .image-holder img.gg {
+    display:block;
+    border-color: var(--green);
+}
+body:has(input[value='green']:checked) .item4 h3 {
+    background-color: var(--green);
+}
+body:has(input[value='green']:checked) .item1 h4 {
+    background-color: var(--green);
+}
+body:has(input[value='green']:checked) .item3 p:hover {
+    background-color: var(--green);
+}
+
+body:has(input[value='yellow']:checked) .image-holder img.yy {
+    display:block;
+    border-color: var(--yellow);
+}
+body:has(input[value='yellow']:checked) .item4 h3 {
+    background-color: var(--yellow);
+}
+body:has(input[value='yellow']:checked) .item1 h4 {
+    background-color: var(--yellow);
+}
+body:has(input[value='yellow']:checked) .item3 p:hover {
+    background-color: var(--yellow);
+}
+
+
+.item1 {
+    width: 90%;
+    grid-row: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item1 h4 {
+    border: none;
+    padding: 2px 2vw;
+    border-radius: 5px;
+    border: 2px solid black;
+    color:#f9f9f9;
+}
+
+.item1 p{
+    margin: 2px 0;
+    padding: 0px;
+    /*background-color: #D32F2F;*/
+}
+
+
+.item2 {
+    width: 80%;
+    padding-top: 0;
+    padding-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-row: 2;
+}
+.item2 h2 {
+    margin-left: 5rem;
+    width: 100%;
+}
+.item3 {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: 80%;
+    grid-row: 3;
+}
+.item3 h2 {
+    width: 100%;
+    margin-left: 5rem;
+}
+.item3 p {
+    text-align: center;
+    font-weight: 700;
+    font-size: medium;
+    border: 3px solid black;
+    border-radius: 4px;
+    width: 2.5rem;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: 3vh;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease-out;
+
+}
+.item3 p:hover {
+    cursor: pointer;
+    color: #f9f9f9;
+    transform: rotate(45deg);
+}
+.item4 {
+    grid-row: 4;
+    text-align: center;
+}
+
+.item4 h3 {
+    color: white;
+    width: 12rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 2vh 3vw;
+}
+.item4 h3::before {
+    content: "\1F6D2";
+    font-size: 1rem;
+    color: white;
+}
