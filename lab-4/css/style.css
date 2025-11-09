@@ -1,14 +1,31 @@
 /* Minimalny reset  */
+:root {
+  --to_do: "Do zrobienia";
+  --in_the_middle: "W trakcie";
+  --done: "Zrobione";
+}
 html {
   font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
+  font-family: "Montserrat", sans-serif; /* font systemowy */
   line-height: 1.5; /* lepsza czytelność */
+  font-weight: 300;
+  color: rgb(49, 24, 4);
+  margin: 0px;
 }
+
 body {
   margin: 1rem;
   padding: 0;
+  background-color: rgb(226, 209, 190);
 }
 
+h1 {
+  margin: 0px;
+  font-weight: 500;
+}
+h3 {
+  font-weight: 500;
+}
 a {
   color: #0066cc; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
@@ -17,3 +34,128 @@ a {
 a:hover {
   text-decoration: underline; /* podkreślenie przy najechaniu */
 }
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  
+}
+header {
+  margin-top: 0px;
+  padding: 0.5rem;
+  text-align:center;
+  border-radius: 10px;
+  border: 2px solid rgb(125, 62, 10);
+  background-color: rgba(253, 197, 253, 0.712);
+  box-shadow: 1px 1px 5px rgba(41, 25, 12, 0.9)
+}
+header:hover {
+  background-color: rgba(253, 197, 253, 0.481);
+  cursor: pointer;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: none; 
+  text-align: center;
+
+}
+
+
+/* X > Ys - tylko elementy które bezpośrednio dziedziczą po X*/
+main > section:nth-child(1) {
+  grid-column: 1;
+  /*background-color: #0066cc;*/
+}
+main > section:nth-child(2) {
+  grid-column: 2;
+  /*background-color:rgb(163, 254, 254);*/
+}
+main > section:nth-child(3) {
+  grid-column: 3;
+  /*background-color: #0066cc;*/
+}
+.card {
+  padding-top: 0.7rem;
+  min-width: 12rem;
+  margin: 0.5rem auto;
+  height: 12rem;
+  cursor: pointer;
+  border: 2px solid rgb(108, 54, 10);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(41, 25, 12, 0.9);
+}
+
+.board {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  width: 90%;
+  min-height: 28em;
+  margin: 1rem auto;
+  border: 2px dashed rgb(125, 62, 10);
+  border-radius: 5px;
+  font-weight: 300;
+}
+.header-card {
+  /*background-color: aliceblue;*/
+  padding-bottom: 0.6rem;
+}
+.color-card {
+  padding: 0px 5px;
+  font-size: 1.5rem;
+  border: 1px solid rgb(81, 40, 6);
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.x {
+  padding: 0px 5px;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  border: 1px solid rgb(81, 40, 6);
+  border-radius: 3px;
+  /*background-color: blueviolet;*/
+}
+
+.edit-text {
+  margin-top: 100px;
+  border-radius: 5px;
+  /*background-color: antiquewhite;*/
+  width:90%;
+  height: 65%;
+  margin: auto;
+}
+.footer-card {
+  display: flex;
+  flex-direction: row;
+  height:15%;
+  padding-top: 10px;
+  background-color: aliceblue;
+  justify-content: left;
+}
+.prawo {
+  font-size: 1.5rem;
+  padding: 0px 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.lewo {
+  font-size: 1.5rem;
+  padding: 0px 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  /*margin-left: 10px;*/
+}
+.board .card span {
+  /*background: steelblue;*/
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.board .card span:hover {
+  display: inline-block;
+  background: rgba(250, 189, 250, 0.849);
+  transform: translate(2px, 0px);
+  
+}
+
