@@ -1,0 +1,108 @@
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+}
+body {
+  margin: 1rem;
+  padding: 0;
+  /*max-width: 1100px;*/
+  margin:auto;
+  background-color: rgb(255, 255, 255);
+}
+header {
+  text-align: center;
+  padding: 1rem 0rem;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgb(217, 214, 214);
+}
+footer {
+  text-align: center;
+  padding: 0.5rem 0rem;
+  border-radius: 7px;
+  background-color: rgb(161, 207, 207);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+button {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(212, 212, 212);
+    box-shadow: 10px 10px 0px;
+    cursor: pointer;
+}
+button:hover{
+  background-color: rgb(186, 186, 186);
+}
+
+main {
+  max-width: 1000px;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  /*background-color: rgb(94, 94, 93);*/
+  text-align: center;
+  padding: 2rem;
+}
+main section:nth-child(1) {
+    width: 100%;
+    border-radius: 7px;
+    background-color: rgba(204, 204, 204, 0.7);
+    flex-wrap: nowrap;
+    
+
+}
+main section:nth-child(2) {
+    width: 100%;
+    height: 50%;
+    /*background-color: lightcyan;*/
+    border-radius: 7px;
+    margin-top: 1rem;
+    /*background-color: rgba(204, 204, 204, 0.7);*/
+    justify-content: center;
+}
+
+div#errorOutput {
+    max-width: 40rem;
+    min-height: 5rem;
+    border-radius: 7px;
+    border: 1px solid rgb(100, 100, 100);
+    margin: 2rem auto;
+    cursor:pointer;
+    font-weight: 300;
+    box-shadow: 10px 10px 0px rgb(100, 100, 100);
+}
+div#outputList {
+
+  max-width: 38rem;
+  min-height: 5rem;
+  border-radius: 7px;
+  border: 1px solid rgb(82, 82, 82);
+  margin: 1rem auto;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  box-shadow: 10px 10px 0px rgb(85, 85, 85);
+}
+li {
+  list-style-type: none;
+  font-weight: 300;
+  
+}
+
+span#loader {
+    width: 5rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(85,85,85);
+    margin: 1rem;
+    cursor: pointer;
+    display: none;
+}

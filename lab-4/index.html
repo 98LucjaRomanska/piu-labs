@@ -5,8 +5,8 @@
   <title>Kanban</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Skrypt z defer -->
   <script src="js/defer.js" defer></script>
 </head>
@@ -49,3 +49,22 @@
   </div>
 </body>
 </html>
+<!--STANY to wszystkie dane które są potrzebne do odtworzenia aplikacji w danym momencie-->
+<!--#to pole prywatne w js, wzorce projektowe sprawdzić-->
+<!--Set() zbior sktruktura w js; ...-rozpakowuje obiekt, to powoduje że tworzy się kopia obiektu, w tym kopia jego staniu-->
+<!--jedyny unikatowy egzemplarz danej klasy, każda kolejna próba stworzenia nowego obiektu, zwraca już tylko ten istniejący obiekt-->
+<!--obiekt klasy store jest singletonem bo moduł store może się pojawić tylko raz (zbudować)-->
+<!--rozdzielanie logiki od wyswietlania elementów, store realizuje logikę-->
+<!--Proxy: nie da się owinąć zmiennych prostych, można obwijać tylko obiekty-->
+<!--Proxy to obiekt który udaje obiekt który obwinął, czyli w przykładzie ktoś z zewnątrz widząć Proxy widzi state--> 
+<!--prop- zmienna, która się zmienia; Proxy to metoda która pozwala przechwytywać więcej rzeczy niż tylko get i set-->
+<!--do zadania: uporządkowana lista elementów posiadająca informacje czy coś jest kółkiem czy kwadratem i czy ma kolor-->
+<!--nie musimy bawic się w subskrybcje bo obiekt to jest w rzeczywistosci jedna tablica-->
+<!--wszystkie zdarzenia mają wywołać stan aplikacji-->
+<!--zmiana stanu jest wysyłana do subskrybentów czyli przycisków-->
+<!--dodawać id z data: mamy dodawać i ususwać elementy o danym id-->
+<!--to user interface ma odwoływać się do stora (zasubskrybowac zmiany stanu), a nie stan do interface-->
+<!--localStorage - odpalenie pierwotne to jedyny moment kiedy musimy odpalic localStorage-->
+<!--w notify mozna rozbudowac o zapisanie do localStorage, a konstruktor rozbudowac o odczytanie localStorage-->
+<!--w ui.js mamy manipulacje, dodawanie, usuwanie kółek-->
+<!--w helpers.js np. nadawanie id, losowanie kolorów-->
