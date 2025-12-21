@@ -17,6 +17,8 @@ import { randomHsl} from './utils.js';
       cntSquaresEl.textContent = squaresCount;
       cntCirclesEl.textContent = circlesCount;
     }*/
+
+
    store.subscribe( (counter) => {
      cntSquaresEl.textContent = counter[0];
      cntCirclesEl.textContent = counter[1];

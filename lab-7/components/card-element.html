@@ -1,0 +1,105 @@
+
+<style>
+  :host {
+    /*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 20px;
+    max-width: 100vh;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);*/
+
+    display: block;
+    font-family: system-ui, Arial;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .center-container {
+    text-align: center;
+  }
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    color: #555;
+  }
+
+  ::slotted(img) {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+
+ 
+
+  .size-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+  }
+
+  ::slotted(span[slot="size"]) {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor:pointer;
+  }
+  ::slotted(span[slot="size"]:hover) {
+    background-color: #a3d9e5;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  ::slotted(button[slot="cart"]) {
+    margin-top: 12px; 
+    padding: 8px 12px; 
+    border: none; 
+    background: #6f95bc; 
+    color: white; 
+    border-radius: 4px; 
+    cursor: pointer;
+  }
+
+::slotted(button[slot="cart"]:hover) {
+    background: #13293b;
+  }
+  /* w tym pliku tworzę strukturę slotów*/ 
+</style>
+
+
+  <slot name = "image"></slot>
+  <div class="center-container">
+    <h3> <slot name = "name"></slot></h3>
+    <slot name = "price"></slot>
+    <div class="size-container">
+      <slot name = "size"></slot>
+    </div>
+    <slot name = "cart"></slot>
+  </div>
+
+<!--<card-element>
+      <img slot="image" src="./components/images/niebieski_sweter1.webp" alt =""/>
+      <span slot="name"> Niebieski sweter </span>
+      <span slot="cena"></span>
+      <button slot="cart">Koszyk </button>
+      <div slot="sizes">
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+        <span>XL</span>
+      </div>
+  </card-element>-->
